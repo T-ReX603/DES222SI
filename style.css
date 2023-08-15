@@ -3,8 +3,8 @@ body, html {
   }
 .mainImage{
     background-image: url("/images/Header-RecStadium.webp");
-    height: 100vh;
-    
+    height: 100vh auto;
+    width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -21,3 +21,56 @@ body, html {
     color: white;
 }
 
+h1 {
+    font-family: 'Bungee Inline', cursive;
+}
+
+.mainCardOne{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1px;
+    flex-shrink: 0;
+    background-color: #002D62;
+
+}
+
+.mainCardOneImage{
+    width: 100%;
+    flex-direction: row;
+    padding: 8px;
+    align-items: flex-start;
+   }
+.mainCardOneText{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 8px;
+    gap: 5px;
+    align-self: stretch;
+}
+
+.mainCardTwo{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    gap: 1px;
+    flex-shrink: 0;
+    background-color: white;
+}
+
+.mainCardTwoImage{
+    width: 100%;
+    flex-direction: row-reverse;
+    padding: 8px;
+    align-items: flex-start;
+   }
+
+.mainCardTwoText{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    padding: 8px;
+    gap: 5px;
+    align-self: stretch;}
+    
