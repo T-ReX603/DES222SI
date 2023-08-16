@@ -1,76 +1,235 @@
-body, html {
-    height: 100vh;
-  }
-.mainImage{
-    background-image: url("/images/Header-RecStadium.webp");
-    height: 100vh auto;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+html, body {
+    height:100%;
 }
-
-.mainImage h1{
-    font-family: 'Bungee Inline', cursive;
-    font-size: 96px;
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-}
-
-h1 {
-    font-family: 'Bungee Inline', cursive;
-}
-
-.mainCardOne{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 1px;
-    flex-shrink: 0;
-    background-color: #002D62;
-
-}
-
-.mainCardOneImage{
-    width: 100%;
-    flex-direction: row;
-    padding: 8px;
-    align-items: flex-start;
-   }
-.mainCardOneText{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 8px;
-    gap: 5px;
-    align-self: stretch;
-}
-
-.mainCardTwo{
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-start;
-    gap: 1px;
-    flex-shrink: 0;
-    background-color: white;
-}
-
-.mainCardTwoImage{
-    width: 100%;
-    flex-direction: row-reverse;
-    padding: 8px;
-    align-items: flex-start;
-   }
-
-.mainCardTwoText{
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-start;
-    padding: 8px;
-    gap: 5px;
-    align-self: stretch;}
+/* Defines the main container size, we are limiting to 72em max and centring in the viewport */
+/*.main-container {
+    max-width: 144em;
+    margin: 0 auto;
     
+    
+}/*
+
+/* Here we define the aspects of style of our elements other than their grid layout */
+
+    .banner {
+        /* TODO: banner styling */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 1em;
+        height: 100vh; /* Set the height to 100% of the viewport height */
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-shrink: 0;
+        background-image: url(/images/Header-RecStadium.webp);
+    }
+
+
+.banner-title {
+    /* TODO: banner main title font styling */
+    color: white;
+    font-size: 4em;
+    font-weight: 400;
+    font-family: 'Bungee Inline', cursive;
+}
+
+.banner-subtitle {
+    /* TODO: banner subtitle font styling */
+    color: white;
+    font-size: 2em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 0.2em
+}
+
+.team-member-card {
+    /* TODO: style the card as a column based flexbox with rounded corners */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1px;
+    flex-shrink: 0;
+    border-radius: 1em;
+    background: #A1869E;
+    overflow: hidden;
+    max-width: 144em;
+    margin: 0 auto;
+}
+
+/* this is the equivalent of setting the image rectangle to "Fill Container" in Figma */ 
+.team-member-card-image {
+    width: 30%;
+    height: 100%;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1px;
+    flex-shrink: 0;
+    border-top-left-radius: 1em;
+    border-top-left-radius: 1em;
+}
+
+.team-member-card-blurb {
+    /* TODO: style the blurb with padding */
+    display: flex;
+    padding: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    }
+
+.our-clients-title {
+    /* TODO: style the 'Our Clients' text font */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: #D1C6AD;
+    color: #A1869E;
+    font-size: 3em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* this is the equivalent of setting the image rectangle to "Fill Container" in Figma */ 
+.client-icon {
+    width: 100%;
+    flex-shrink: 0;
+    max-width: 144em;
+}
+
+/* now we create names for the grid areas for specific elements */
+#banner {
+    /* TODO: give the grid-area a name */
+    grid-area: ban;
+}
+
+#teamMemberCard1 {
+    /* TODO: give the grid-area a name */
+    grid-area: tm1;
+}
+
+#teamMemberCard2 {
+    /* TODO: give the grid-area a name */
+    grid-area: tm2;
+}
+
+#ourClientsTitle {
+    /* TODO: give the grid-area a name */
+    grid-area: oct;
+}
+
+#clientIcon1 {
+    /* TODO: give the grid-area a name */
+    grid-area: ci1;
+}
+
+#clientIcon2 {
+    /* TODO: give the grid-area a name */
+    grid-area: ci2;
+}
+
+#clientIcon3 {
+    /* TODO: give the grid-area a name */
+    grid-area: ci3;
+}
+
+#clientIcon4 {
+    /* TODO: give the grid-area a name */
+    grid-area: ci4;
+}
+
+#clientIcon5 {
+    /* TODO: give the grid-area a name */
+    grid-area: ci5;
+}
+
+#clientIcon6 {
+    /* TODO: give the grid-area a name */
+    grid-area: ci6;
+}
+
+#clientIcon7 {
+    /* TODO: give the grid-area a name */
+    grid-area: ci7;
+}
+
+#clientIcon8 {
+    /* TODO: give the grid-area a name */
+    grid-area: ci8;
+}
+
+/* Use a flexible layout grid */
+.main-container {
+    display: grid;
+    column-gap: 1em;
+}
+  
+/* 
+Responsive Layout breakpoints. We start 'mobile-first' i.e. we define how the layout should look
+for the smallest screen sizes. In this case we want a single column that spans the main container.
+Because this CSS definition comes first, it will apply by default. Then we override it below with 
+media queries for progressively bigger screen widths
+*/
+.main-container {
+    /* TODO: setup the grid-template for mobile phone layout */
+    grid-template:
+    "ban ban ban ban" minmax(auto, auto)
+
+    " .   .   .   . " minmax(2em, auto)
+    "tm1 tm1 tm1 tm1" minmax(30em, auto)
+    " .   .   .   . " minmax(2em, auto)
+    "tm2 tm2 tm2 tm2" minmax(30em, auto)
+    " .   .   .   . " minmax(2em, auto)
+    "oct oct oct oct" minmax(6em, auto)
+    " .   .   .   . " minmax(2em, auto)
+    "ci1 ci1 ci2 ci2"minmax(8em, auto)
+    "ci3 ci3 ci4 ci4" minmax(8em, auto)
+    "ci5 ci5 ci6 ci6" minmax(8em, auto)
+    "ci7 ci7 ci8 ci8" minmax(8em, auto)
+
+
+
+}
+
+@media (min-width: 50em){
+    .main-container {
+            /* TODO: setup the grid-template for tablet layout */
+            grid-template:
+            "ban ban ban ban ban ban ban ban" minmax(auto, auto)
+            " .   .   .   .   .   .   .   . " minmax(2em, auto)
+            "tm1 tm1 tm1 tm1 tm2 tm2 tm2 tm2" minmax(30em, auto)
+            " .   .   .   .   .   .   .   . " minmax(2em, auto)
+            "oct oct oct oct oct oct oct oct" minmax(6em, auto)
+            " .   .   .   .   .   .   .   . " minmax(2em, auto)
+            "ci1 ci1 ci1 ci1 ci2 ci2 ci2 ci2" minmax(14em, auto)
+            "ci3 ci3 ci3 ci3 ci4 ci4 ci4 ci4"minmax(14em, auto)
+            "ci5 ci5 ci5 ci5 ci6 ci6 ci6 ci6" minmax(14em, auto)
+            "ci7 ci7 ci7 ci7 ci8 ci8 ci8 ci8" minmax(14em, auto)
+    }
+}
+
+@media (min-width: 75em){
+    .main-container {
+        /* TODO: setup the grid-template for desktop layout */
+        grid-template:
+     "ban ban ban ban ban ban ban ban ban ban ban ban ban ban ban ban" minmax(auto, auto)
+     " .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
+     "tm1 tm1 tm1 tm1 tm1 tm1 tm1 tm1 tm1 tm1 tm1 tm1 tm1 tm1 tm1 tm1" minmax(32em, auto)
+     " .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   . " minmax(4em, auto)
+     "tm2 tm2 tm2 tm2 tm2 tm2 tm2 tm2 tm2 tm2 tm2 tm2 tm2 tm2 tm2 tm2" minmax(32em, auto)
+     "oct oct oct oct oct oct oct oct oct oct oct oct oct oct oct oct" minmax(6em, auto)
+     " .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
+     "ci1 ci1 ci1 ci1 ci2 ci2 ci2 ci2 ci3 ci3 ci3 ci3 ci4 ci4 ci4 ci4" minmax(14em, auto)
+     " .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
+     "ci5 ci5 ci5 ci5 ci6 ci6 ci6 ci6 ci7 ci7 ci7 ci7 ci8 ci8 ci8 ci8" minmax(14em, auto)
+    }
+}
