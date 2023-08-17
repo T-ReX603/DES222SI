@@ -148,7 +148,7 @@ html, body {
     color: white;
     padding: 10px;
     font-family: "Bungee Inline", cursive;
-    font-size: 2em;
+
     opacity: 0;
     transition: opacity 0.3s ease-in-out; /* Transition in and out with ease */
     text-align: center; /* Center the text horizontally */
@@ -171,7 +171,7 @@ html, body {
         margin: auto auto; /* Add a semicolon here */
         overflow: hidden;
         max-width: 80em;
-       
+    
         background-position: center;
         background-size: cover;
         justify-content: center;
@@ -316,7 +316,18 @@ html, body {
     }
     
     .overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #000; /* Solid black background */
+        color: white;
+        padding: 10px;
+        font-family: "Bungee Inline", cursive;
         font-size: 0.5em;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out; /* Transition in and out with ease */
+        text-align: center; /* Center the text horizontally */
     }
     
     .banner-title {
@@ -350,10 +361,10 @@ html, body {
             " .   .   .   .   .   .   .   . " minmax(2em, auto)
             "oct oct oct oct oct oct oct oct" minmax(6em, auto)
             " .   .   .   .   .   .   .   . " minmax(2em, auto)
-            "ci1 ci1 ci1 ci1 ci2 ci2 ci2 ci2" minmax(12em, auto)
-            "ci3 ci3 ci3 ci3 ci4 ci4 ci4 ci4"minmax(12em, auto)
-            "ci5 ci5 ci5 ci5 ci6 ci6 ci6 ci6" minmax(12em, auto)
-            "ci7 ci7 ci7 ci7 ci8 ci8 ci8 ci8" minmax(14em, auto)
+            "ci1 ci1 ci1 ci1 ci2 ci2 ci2 ci2" minmax(8em, auto)
+            "ci3 ci3 ci3 ci3 ci4 ci4 ci4 ci4"minmax(8em, auto)
+            "ci5 ci5 ci5 ci5 ci6 ci6 ci6 ci6" minmax(8em, auto)
+            "ci7 ci7 ci7 ci7 ci8 ci8 ci8 ci8" minmax(8em, auto)
             " .   .   .  fin fin  .   .   . " minmax(2em, auto)
             "fim fim fim fim fim fim fim fim" minmax(14em, auto)
             " .   .   .   .   .   .   .   . " minmax(2em, auto)
@@ -397,7 +408,7 @@ html, body {
         font-size: 1em;
     }
     .overlay {
-        font-size: 0.5em;
+        font-size: 1em;
     }
 }
 
@@ -420,9 +431,6 @@ html, body {
 
     }
 
-    }
-    .overlay {
-        font-size: 1em;
     }
 
     .team-member-card-image {
