@@ -1,13 +1,7 @@
 html, body {
     height:100%;
 }
-/* Defines the main container size, we are limiting to 72em max and centring in the viewport */
-/*.main-container {
-    max-width: 144em;
-    margin: 0 auto;
-    
-    
-}/*
+
 
 /* Here we define the aspects of style of our elements other than their grid layout */
 
@@ -169,17 +163,18 @@ html, body {
 }
 
 
-    .fin-image {
+.fin-image {
     width: 100%;
     height: 100%;
+    display: flex;
     flex-shrink: 0;
-    object-fit: cover;
+    overflow: hidden;
     max-width: 80em;
-    max-block-size: 24em;
-    margin: 1px auto;
+    max-block-size: auto;
+    margin: auto auto;
+    background-position:center;
     justify-content: center;
     align-items: center;
-    text-align: center; 
     }
 
 
@@ -328,7 +323,16 @@ html, body {
      "ci1 ci1 ci1 ci1 ci2 ci2 ci2 ci2 ci3 ci3 ci3 ci3 ci4 ci4 ci4 ci4" minmax(14em, auto)
      " .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   . " minmax(1em, auto)
      "ci5 ci5 ci5 ci5 ci6 ci6 ci6 ci6 ci7 ci7 ci7 ci7 ci8 ci8 ci8 ci8" minmax(14em, auto)
-    "  .   .   .   .   .  fin fin  fin fin fin fin .   .   .   .   . " minmax(2em, auto)
-    " fim fim fim fim fim fim fim fim fim fim fim fim fim fim fim fim" minmax(2em, auto)
+    "  .   .   .   .   .  fin fin  fin fin fin fin .   .   .   .   . " minmax(1em, auto)
+    " fim fim fim fim fim fim fim fim fim fim fim fim fim fim fim fim" minmax(1em, auto)
     }
+}
+
+@media (max-width: 767px) { 
+    .team-member-card-blurb {
+      font-size: 1em; /* Adjust the font size for mobile */
+
+    }
+
+  
 }
