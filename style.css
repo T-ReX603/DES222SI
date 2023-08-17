@@ -17,7 +17,6 @@ html, body {
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
-        padding: 1em;
         height: 100vh;
         width: 100%;
         background-position: center;
@@ -43,7 +42,38 @@ html, body {
     text-align: center; /* Added text-align property for centering the text horizontally */
     height: 100vh;
     
-}
+} 
+
+.scroll-button {
+    position: absolute;
+    bottom: 2em;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    animation: bounce 1s infinite;
+  }
+  
+  .bounce-arrow {
+    width: 20px;
+    height: 20px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    margin: 0 auto;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+  
 
 
 .team-member-card {
@@ -77,16 +107,16 @@ html, body {
 }
 
 .team-member-card-blurb {
-    /* TODO: style the blurb with padding */
     display: flex;
-    padding: 8px;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
     gap: 10px;
     align-self: stretch;
     color: white;
-    }
-
+    padding: 8px;
+    font-family: 'Cabin', sans-serif;
+}
 .our-clients-title {
     /* TODO: style the 'Our Clients' text font */
     display: flex;

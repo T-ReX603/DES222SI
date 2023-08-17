@@ -8,21 +8,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap" rel="stylesheet"> 
 </head>
 <body>
     
     <div class="main-container">
-      <div class="banner" id="banner">
-        <div class="banner-title">For the Love of our Game</div>
-      </div>
+        <div class="banner" id="banner">
+            <div class="banner-title">For the Love of our Game</div>
+            <div class="scroll-button">
+                <div class="bounce-arrow"></div>
+              </div>
+              
+        </div>
+        
+        
   
       <div class="team-member-card" id="teamMemberCard1">
         <img class="team-member-card-image" id="teamMemberCardImage1" src="./images/recOneImage.jpg"></img>
-        <div class="team-member-card-blurb" id="teamMemberCardBlurb1">An emerging creative designer with 3 years of experience, Anuj specializes in digital media design, typography, and illustration. Currently studying at UniSC, she combines modern trends with a timeless aesthetic to create innovative and enduring designs</div>
+        <div class="team-member-card-blurb" id="teamMemberCardBlurb1">Welcome to the heart of football fervor at AAMI Park, where passion for the beautiful game reaches its zenith. Nestled in Melbourne, this iconic stadium transforms into a cauldron of emotions every time the Melbourne Victory takes the field. The electric atmosphere resonates with the collective heartbeat of fans who flock here to witness the sport's magic unfold.</div>
       </div>
       <div class="team-member-card" id="teamMemberCard2">
         <img class="team-member-card-image" id="teamMemberCardImage2" src="./images/recTwoImage.png"></img>
-        <div class="team-member-card-blurb" id="teamMemberCardBlurb2">Leonardo is a dynamic Creative Director with a dual expertise in visual design and strategic thinking. A Central Saint Martins graduate, he transforms abstract concepts into tangible solutions, employing design thinking as a catalyst for business growth and social change.</div>
+        <div class="team-member-card-blurb" id="teamMemberCardBlurb2">Stepping into AAMI Park, you're not just entering a stadium; you're stepping into a shrine of allegiance. The sea of blue and white, the colors of Melbourne Victory, envelops you, a testament to the unbreakable bond between the team and its supporters. From the rousing chants echoing through the stands to the thunderous roars of celebration, this is where loyalty crystallizes into a shared experience that transcends the confines of the pitch.</div>
       </div>
 
     
@@ -60,6 +69,29 @@
             <div class="overlay">Innovation</div>
         </div>       
     </div>
-      
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollButton = document.querySelector(".scroll-button");
+
+  scrollButton.addEventListener("click", function () {
+    const teamCardElement = document.getElementById("teamMemberCard1");
+    if (teamCardElement) {
+      // Scroll to just above the client-member-card-1
+      const yOffset = teamCardElement.getBoundingClientRect().top - 20;
+      window.scrollTo({
+        top: window.pageYOffset + yOffset,
+        behavior: "smooth",
+      });
+    }
+  });
+});
+
+</script>
+
+
+        </script>
+           
   </body>
+  
   </html>
