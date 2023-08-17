@@ -285,6 +285,7 @@ html, body {
     "ci5 ci5 ci6 ci6" minmax(4em, auto)
     " .   .   .   . " minmax(1em, auto)
     "ci7 ci7 ci8 ci8" minmax(4em, auto)
+    " .   .   .   . " minmax(6em, auto)
     "fin fin fin fin" minmax(2em, auto)
     "fim fim fim fim" minmax(14em, 4em)
     " .   .   .   . " minmax(2em, auto)
@@ -347,7 +348,14 @@ html, body {
         object-fit: cover;
         justify-content: flex-end; /* Changed from "right" to "flex-end" */
     }
-
+    .fin-title {
+        font-family: "Bungee Inline", cursive;
+        font-size: 2em;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: -260px;
+      }
 
 
 
@@ -409,6 +417,17 @@ html, body {
     }
     .overlay {
         font-size: 1em;
+    }
+    .fin-title {
+        font-family: "Bungee Inline", cursive;
+        font-size: 2em;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 0;
+      }
+      .banner-title {
+        font-size: 7em;
     }
 }
 
