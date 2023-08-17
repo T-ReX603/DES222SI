@@ -24,7 +24,7 @@ html, body {
         background-repeat: no-repeat;
         background-size: cover;
         flex-shrink: 0;
-        background-image: url(/images/Header-RecStadium.webp);
+        background-image: url(/images/Header-RecStadium.png);
     }
 
 
@@ -106,6 +106,34 @@ html, body {
     height: 100%;
     flex-shrink: 0;
     object-fit: cover;
+}
+
+.client-icon-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000; /* Solid black background */
+    color: white;
+    padding: 10px;
+    font-family: "Bungee Inline", cursive;
+    font-size: 2em;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; /* Transition in and out with ease */
+    text-align: center; /* Center the text horizontally */
+}
+
+.client-icon-container:hover .overlay {
+    opacity: 1; /* Show the overlay on hover */
+}
+
+.client-icon-container:not(:hover) .overlay {
+    opacity: 0; /* Hide the overlay when not hovering */
 }
 
 /* now we create names for the grid areas for specific elements */
