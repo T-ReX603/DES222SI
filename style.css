@@ -29,16 +29,19 @@ html, body {
 
 
 .banner-title {
-    /* TODO: banner main title font styling */
     color: white;
-    font-size: 90px;
+    font-size: 7em;
+    font-stretch: 2em;
     font-style: normal;
     font-weight: 400;
     font-family: 'Bungee Inline', cursive;
     margin: auto;
+    display: flex; /* Added display property */
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center; /* Added text-align property for centering the text horizontally */
+    height: 100vh;
     
 }
 
