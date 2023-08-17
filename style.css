@@ -160,6 +160,29 @@ html, body {
     transition: opacity 0.3s ease-in-out; /* Transition in and out with ease */
     text-align: center; /* Center the text horizontally */
 }
+.fin-title{
+    font-family: "Bungee Inline", cursive;
+    font-size: 2em;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+}
+
+
+    .fin-image {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+    max-width: 80em;
+    max-block-size: 24em;
+    margin: 1px auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    }
+
+
 
 .client-icon-container:hover .overlay {
     opacity: 1; /* Show the overlay on hover */
@@ -230,12 +253,22 @@ html, body {
     grid-area: ci8;
 }
 
+#fin-title {
+    grid-area: fin;
+}
+
+#fin-image {
+    grid-area: fim;
+    
+}
+
 /* Use a flexible layout grid */
 .main-container {
     display: grid;
     column-gap: 1em;
 }
-  
+
+
 .main-container {
     /* TODO: setup the grid-template for mobile phone layout */
     grid-template:
@@ -255,6 +288,8 @@ html, body {
     "ci5 ci5 ci6 ci6" minmax(4em, auto)
     " .   .   .   . " minmax(1em, auto)
     "ci7 ci7 ci8 ci8" minmax(4em, auto)
+    "fin fin fin fin" minmax(2em, auto)
+    "fim fim fim fim" minmax(14em, 4em)
 
 
 
@@ -274,6 +309,8 @@ html, body {
             "ci3 ci3 ci3 ci3 ci4 ci4 ci4 ci4"minmax(14em, auto)
             "ci5 ci5 ci5 ci5 ci6 ci6 ci6 ci6" minmax(14em, auto)
             "ci7 ci7 ci7 ci7 ci8 ci8 ci8 ci8" minmax(14em, auto)
+            " .   .   .  fin fin  .   .   . " minmax(2em, auto)
+            "fim fim fim fim fim fim fim fim" minmax(14em, auto)
     }
 }
 
@@ -291,5 +328,7 @@ html, body {
      "ci1 ci1 ci1 ci1 ci2 ci2 ci2 ci2 ci3 ci3 ci3 ci3 ci4 ci4 ci4 ci4" minmax(14em, auto)
      " .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   . " minmax(1em, auto)
      "ci5 ci5 ci5 ci5 ci6 ci6 ci6 ci6 ci7 ci7 ci7 ci7 ci8 ci8 ci8 ci8" minmax(14em, auto)
+    "  .   .   .   .   .  fin fin  fin fin fin fin .   .   .   .   . " minmax(2em, auto)
+    " fim fim fim fim fim fim fim fim fim fim fim fim fim fim fim fim" minmax(2em, auto)
     }
 }
