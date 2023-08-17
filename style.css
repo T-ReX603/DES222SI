@@ -90,15 +90,17 @@ html, body {
 .team-member-card-image {
     width: 40%;
     height: 100%;
+    display: flex;
     flex-direction: row;
     align-items: flex-start;
     gap: 1px;
     flex-shrink: 0;
     border-top-left-radius: 1em;
-    border-top-left-radius: 1em;
+    border-top-right-radius: 1em; /* Corrected property name */
     object-fit: cover;
-    
+    justify-content: flex-end; /* Changed from "right" to "flex-end" */
 }
+
 
 .team-member-card-blurb {
     display: flex;
@@ -113,19 +115,15 @@ html, body {
 }
 .our-clients-title {
     /* TODO: style the 'Our Clients' text font */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-shrink: 0;
-    border-radius: 16px;
     font-size: 4em;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     font-family: "Bungee Inline", cursive;
+    margin: 10px auto; /* Center the title horizontally using margin */
+    text-align: center; /* Center the title text horizontally */
 }
+
 
 /* this is the equivalent of setting the image rectangle to "Fill Container" in Figma */ 
 .client-icon {
@@ -133,6 +131,7 @@ html, body {
     height: 100%;
     flex-shrink: 0;
     object-fit: cover;
+    padding: 1em;
 }
 
 .client-icon-container {
@@ -289,10 +288,56 @@ html, body {
     "fin fin fin fin" minmax(2em, auto)
     "fim fim fim fim" minmax(14em, 4em)
     " .   .   .   . " minmax(2em, auto)
-
-
-
 }
+    .team-member-card{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 0px;
+        flex-shrink: 0;
+        border-radius: 1em;
+        background-color: #002D62;
+        overflow: hidden;
+        max-width: 80em;
+        max-block-size: 24em;
+        margin: 1px auto;
+    }
+    .team-member-card-blurb {
+        display: flex;
+        flex-direction: row;
+        align-items: center; /* Center horizontally */
+        justify-content: flex-end; /* Align at the bottom */
+        gap: 10px;
+        align-self: stretch;
+        color: white;
+        padding: 8px;
+        font-family: 'Cabin', sans-serif;
+    }
+    
+    .overlay {
+        font-size: 1em;
+    }
+    
+    .banner-title {
+        font-size: 6.5em;
+    }
+    
+    .team-member-card-image {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1px;
+        flex-shrink: 0;
+        border-top-left-radius: 1em;
+        border-top-right-radius: 1em;
+        object-fit: cover;
+        justify-content: flex-end; /* Changed from "right" to "flex-end" */
+    }
+
+
+
 
 @media (min-width: 50em){
     .main-container {
@@ -304,13 +349,53 @@ html, body {
             " .   .   .   .   .   .   .   . " minmax(2em, auto)
             "oct oct oct oct oct oct oct oct" minmax(6em, auto)
             " .   .   .   .   .   .   .   . " minmax(2em, auto)
-            "ci1 ci1 ci1 ci1 ci2 ci2 ci2 ci2" minmax(14em, auto)
-            "ci3 ci3 ci3 ci3 ci4 ci4 ci4 ci4"minmax(14em, auto)
-            "ci5 ci5 ci5 ci5 ci6 ci6 ci6 ci6" minmax(14em, auto)
+            "ci1 ci1 ci1 ci1 ci2 ci2 ci2 ci2" minmax(12em, auto)
+            "ci3 ci3 ci3 ci3 ci4 ci4 ci4 ci4"minmax(12em, auto)
+            "ci5 ci5 ci5 ci5 ci6 ci6 ci6 ci6" minmax(12em, auto)
             "ci7 ci7 ci7 ci7 ci8 ci8 ci8 ci8" minmax(14em, auto)
             " .   .   .  fin fin  .   .   . " minmax(2em, auto)
             "fim fim fim fim fim fim fim fim" minmax(14em, auto)
             " .   .   .   .   .   .   .   . " minmax(2em, auto)
+    }
+    .team-member-card-image {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1px;
+        flex-shrink: 0;
+        border-top-left-radius: 1em;
+        border-top-right-radius: 1em;
+        object-fit: cover;
+        justify-content: flex-end; /* Changed from "right" to "flex-end" */
+    }
+    .team-member-card{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0px;
+        flex-shrink: 0;
+        border-radius: 1em;
+        background-color: #002D62;
+        overflow: hidden;
+        max-width: 80em;
+        max-block-size: 24em;
+        margin: 1px auto;
+    }
+    .team-member-card-blurb {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center horizontally */
+        justify-content: flex-end; /* Align at the bottom */
+        gap: 10px;
+        align-self: stretch;
+        color: white;
+        padding: 8px;
+        font-family: 'Cabin', sans-serif;
+    }
+    .overlay {
+        font-size: 0.8em;
     }
 }
 
@@ -332,18 +417,49 @@ html, body {
     " fim fim fim fim fim fim fim fim fim fim fim fim fim fim fim fim" minmax(1em, auto)
 
     }
-}
 
-@media (max-width: 767px) { 
+    }
+    .overlay {
+        font-size: 2em;
+    }
+
+    .team-member-card-image {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1px;
+        flex-shrink: 0;
+        border-top-left-radius: 1em;
+        border-top-right-radius: 1em;
+        object-fit: cover;
+        justify-content: flex-end; /* Changed from "right" to "flex-end" */
+    }
+    .team-member-card{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 0px;
+        flex-shrink: 0;
+        border-radius: 1em;
+        background-color: #002D62;
+        overflow: hidden;
+        max-width: 80em;
+        max-block-size: 24em;
+        margin: 1px auto;
+    }
     .team-member-card-blurb {
-      font-size: 1em; /* Adjust the font size for mobile */
+        display: flex;
+        flex-direction: row;
+        align-items: center; /* Center horizontally */
+        justify-content: flex-end; /* Align at the bottom */
+        gap: 10px;
+        align-self: stretch;
+        color: white;
+        padding: 8px;
+        font-family: 'Cabin', sans-serif;
+    }
 
-    }
-    .overlay{
-        font-size: 1em;
-    }
-    .banner-title{
-        font-size: 6.5em;
-    }
-  
-}
+
+
