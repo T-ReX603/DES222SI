@@ -163,19 +163,22 @@ html, body {
 }
 
 
+
 .fin-image {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-shrink: 0;
-    overflow: hidden;
-    max-width: 80em;
-    max-block-size: auto;
-    margin: auto auto;
-    background-position:center;
-    justify-content: center;
-    align-items: center;
-    }
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-shrink: 0;
+        margin: auto auto; /* Add a semicolon here */
+        overflow: hidden;
+        max-width: 80em;
+       
+        background-position: center;
+        background-size: cover;
+        justify-content: center;
+        padding-bottom: 1em ;
+       
+}
 
 
 
@@ -285,6 +288,7 @@ html, body {
     "ci7 ci7 ci8 ci8" minmax(4em, auto)
     "fin fin fin fin" minmax(2em, auto)
     "fim fim fim fim" minmax(14em, 4em)
+    " .   .   .   . " minmax(2em, auto)
 
 
 
@@ -306,6 +310,7 @@ html, body {
             "ci7 ci7 ci7 ci7 ci8 ci8 ci8 ci8" minmax(14em, auto)
             " .   .   .  fin fin  .   .   . " minmax(2em, auto)
             "fim fim fim fim fim fim fim fim" minmax(14em, auto)
+            " .   .   .   .   .   .   .   . " minmax(2em, auto)
     }
 }
 
@@ -325,6 +330,7 @@ html, body {
      "ci5 ci5 ci5 ci5 ci6 ci6 ci6 ci6 ci7 ci7 ci7 ci7 ci8 ci8 ci8 ci8" minmax(14em, auto)
     "  .   .   .   .   .  fin fin  fin fin fin fin .   .   .   .   . " minmax(1em, auto)
     " fim fim fim fim fim fim fim fim fim fim fim fim fim fim fim fim" minmax(1em, auto)
+
     }
 }
 
@@ -333,6 +339,11 @@ html, body {
       font-size: 1em; /* Adjust the font size for mobile */
 
     }
-
+    .overlay{
+        font-size: 1em;
+    }
+    .banner-title{
+        font-size: 6.5em;
+    }
   
 }
