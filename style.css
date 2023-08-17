@@ -31,20 +31,15 @@ html, body {
 .banner-title {
     /* TODO: banner main title font styling */
     color: white;
-    font-size: 4em;
-    font-weight: 400;
-    font-family: 'Bungee Inline', cursive;
-}
-
-.banner-subtitle {
-    /* TODO: banner subtitle font styling */
-    color: white;
-    font-size: 2em;
+    font-size: 256px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
-    padding-left: 0.2em
+    font-weight: 400;
+    font-family: 'Bungee Inline', cursive;
+    margin: auto;
+    
 }
+
 
 .team-member-card {
     /* TODO: style the card as a column based flexbox with rounded corners */
@@ -56,13 +51,13 @@ html, body {
     border-radius: 1em;
     background: #A1869E;
     overflow: hidden;
-    max-width: 144em;
-    margin: 0 auto;
+    max-width: 228em;
+    margin: auto auto;
 }
 
 /* this is the equivalent of setting the image rectangle to "Fill Container" in Figma */ 
 .team-member-card-image {
-    width: 30%;
+    width: 40%;
     height: 100%;
     flex-direction: row;
     align-items: flex-start;
@@ -91,19 +86,20 @@ html, body {
     gap: 10px;
     flex-shrink: 0;
     border-radius: 16px;
-    background: #D1C6AD;
-    color: #A1869E;
-    font-size: 3em;
+    font-size: 8em;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    font-family: "Bungee Inline", cursive;
 }
 
 /* this is the equivalent of setting the image rectangle to "Fill Container" in Figma */ 
 .client-icon {
     width: 100%;
+    height: 100%;
     flex-shrink: 0;
-    max-width: 144em;
+    max-width: 110em;
+    object-fit: cover;
 }
 
 /* now we create names for the grid areas for specific elements */
@@ -173,12 +169,6 @@ html, body {
     column-gap: 1em;
 }
   
-/* 
-Responsive Layout breakpoints. We start 'mobile-first' i.e. we define how the layout should look
-for the smallest screen sizes. In this case we want a single column that spans the main container.
-Because this CSS definition comes first, it will apply by default. Then we override it below with 
-media queries for progressively bigger screen widths
-*/
 .main-container {
     /* TODO: setup the grid-template for mobile phone layout */
     grid-template:
@@ -223,13 +213,13 @@ media queries for progressively bigger screen widths
         grid-template:
      "ban ban ban ban ban ban ban ban ban ban ban ban ban ban ban ban" minmax(auto, auto)
      " .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
-     "tm1 tm1 tm1 tm1 tm1 tm1 tm1 tm1 tm1 tm1 tm1 tm1 tm1 tm1 tm1 tm1" minmax(32em, auto)
+     "tm1 tm1 tm1 tm1 tm1 tm1 tm1 tm1 tm1 tm1 tm1 tm1 tm1 tm1 tm1 tm1" minmax(48em, auto)
      " .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   . " minmax(4em, auto)
-     "tm2 tm2 tm2 tm2 tm2 tm2 tm2 tm2 tm2 tm2 tm2 tm2 tm2 tm2 tm2 tm2" minmax(32em, auto)
+     "tm2 tm2 tm2 tm2 tm2 tm2 tm2 tm2 tm2 tm2 tm2 tm2 tm2 tm2 tm2 tm2" minmax(48em, auto)
      "oct oct oct oct oct oct oct oct oct oct oct oct oct oct oct oct" minmax(6em, auto)
      " .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
-     "ci1 ci1 ci1 ci1 ci2 ci2 ci2 ci2 ci3 ci3 ci3 ci3 ci4 ci4 ci4 ci4" minmax(14em, auto)
-     " .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
-     "ci5 ci5 ci5 ci5 ci6 ci6 ci6 ci6 ci7 ci7 ci7 ci7 ci8 ci8 ci8 ci8" minmax(14em, auto)
+     "ci1 ci1 ci1 ci1 ci2 ci2 ci2 ci2 ci3 ci3 ci3 ci3 ci4 ci4 ci4 ci4" minmax(4em, 80em)
+     " .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   . " minmax(1em, auto)
+     "ci5 ci5 ci5 ci5 ci6 ci6 ci6 ci6 ci7 ci7 ci7 ci7 ci8 ci8 ci8 ci8" minmax(4em, 80em)
     }
 }
