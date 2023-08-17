@@ -24,7 +24,7 @@ html, body {
         background-repeat: no-repeat;
         background-size: cover;
         flex-shrink: 0;
-        background-image: url(/images/Header-RecStadium.png);
+        background-image: url(./images/Header-RecStadium.png);
     }
 
 
